@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="{{ asset('admin/plugins/summernote/summernote-bs4.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <style>
         nav svg{
             height: 20px;
@@ -263,10 +264,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="pages/gallery.html" class="nav-link">
+                        <a href="{{ route('admin.homeslider') }}" class="nav-link">
                             <i class="nav-icon far fa-image"></i>
                             <p>
                                 Slider
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('admin.homecategories') }}" class="nav-link">
+                            <i class="nav-icon far fa-image"></i>
+                            <p>
+                                Home Category
                             </p>
                         </a>
                     </li>
@@ -394,7 +403,9 @@
 <script src="{{asset('admin/dist/js/pages/dashboard.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset('admin/dist/js/demo.js')}}"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+@stack('scripts')
 </body>
 @livewireScripts
+
 </html>
